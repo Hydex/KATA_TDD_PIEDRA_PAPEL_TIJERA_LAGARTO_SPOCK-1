@@ -5,230 +5,230 @@ namespace Test_Piedra_Papel_Tijera_Lagarto_Spock
     public class TestJuego
     {
         [TestFixture]
-        public class Test_Mismos_Elementos
+        public class TestMismosElementos
         {
             Piedra_Papel_Tijera_Lagarto_Spock.Clases.IJuego SUT =
                 new Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego();
 
-            private string resultado;
+            private string _resultado;
             [SetUp]
             public void Setup()
             {
-                resultado = SUT.ObtenerResultado
+                _resultado = SUT.ObtenerResultado
                     (Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Tijera,
                     Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Tijera);
             }
             [Test]
             public void Empate()
             {
-                Assert.AreEqual(resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.EMPATE);
+                Assert.AreEqual(_resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Empate);
             }
         }
 
         [TestFixture]
-        public class Test_Tijeras_Cortan_Papel {
+        public class TestTijerasCortanPapel {
             Piedra_Papel_Tijera_Lagarto_Spock.Clases.IJuego SUT = 
                 new Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego();
 
-            private string resultado;
+            private string _resultado;
             [SetUp]
             public void Setup() {
-                resultado = SUT.ObtenerResultado
+                _resultado = SUT.ObtenerResultado
                     (Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Tijera,
                     Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Papel);
             }
             [Test]
             public void Gana_Tijera_A_Papel() {
-                Assert.AreEqual(resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GANA_JUGADOR_1);
+                Assert.AreEqual(_resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GanaJugador1);
             }
         }
 
         [TestFixture]
-        public class Test_Papel_Cubre_Piedra
+        public class TestPapelCubrePiedra
         {
             Piedra_Papel_Tijera_Lagarto_Spock.Clases.IJuego SUT =
                 new Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego();
 
-            private string resultado;
+            private string _resultado;
             [SetUp]
             public void Setup()
             {
-                resultado = SUT.ObtenerResultado
+                _resultado = SUT.ObtenerResultado
                     (Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Papel,
                     Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Piedra);
             }
             [Test]
             public void Gana_Papel_A_Piedra()
             {
-                Assert.AreEqual(resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GANA_JUGADOR_1);
+                Assert.AreEqual(_resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GanaJugador1);
             }
         }
 
         [TestFixture]
-        public class Test_Piedra_Aplasta_Lagarto
+        public class TestPiedraAplastaLagarto
         {
             Piedra_Papel_Tijera_Lagarto_Spock.Clases.IJuego SUT =
                 new Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego();
 
-            private string resultado;
+            private string _resultado;
             [SetUp]
             public void Setup()
             {
-                resultado = SUT.ObtenerResultado
+                _resultado = SUT.ObtenerResultado
                     (Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Piedra,
                     Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Lagarto);
             }
             [Test]
             public void Gana_Piedra_A_Lagarto()
             {
-                Assert.AreEqual(resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GANA_JUGADOR_1);
+                Assert.AreEqual(_resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GanaJugador1);
             }
         }
 
         [TestFixture]
-        public class Test_Lagarto_Envenena_Spock
+        public class TestLagartoEnvenenaSpock
         {
             Piedra_Papel_Tijera_Lagarto_Spock.Clases.IJuego SUT =
                 new Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego();
 
-            private string resultado;
+            private string _resultado;
             [SetUp]
             public void Setup()
             {
-                resultado = SUT.ObtenerResultado
+                _resultado = SUT.ObtenerResultado
                     (Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Lagarto,
                     Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Spock);
             }
             [Test]
             public void Gana_Lagarto_A_Spock()
             {
-                Assert.AreEqual(resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GANA_JUGADOR_1);
+                Assert.AreEqual(_resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GanaJugador1);
             }
         }
 
         [TestFixture]
-        public class Test_Spock_Destroza_Tijeras
+        public class TestSpockDestrozaTijeras
         {
             Piedra_Papel_Tijera_Lagarto_Spock.Clases.IJuego SUT =
                 new Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego();
 
-            private string resultado;
+            private string _resultado;
             [SetUp]
             public void Setup()
             {
-                resultado = SUT.ObtenerResultado
+                _resultado = SUT.ObtenerResultado
                     (Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Tijera,
                     Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Spock);
             }
             [Test]
             public void Gana_Spock_A_Tijeras()
             {
-                Assert.AreEqual(resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GANA_JUGADOR_2);
+                Assert.AreEqual(_resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GanaJugador2);
             }
         }
 
         [TestFixture]
-        public class Test_Tijeras_Decapitan_Lagarto
+        public class TestTijerasDecapitanLagarto
         {
             Piedra_Papel_Tijera_Lagarto_Spock.Clases.IJuego SUT =
                 new Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego();
 
-            private string resultado;
+            private string _resultado;
             [SetUp]
             public void Setup()
             {
-                resultado = SUT.ObtenerResultado
+                _resultado = SUT.ObtenerResultado
                     (Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Tijera,
                     Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Lagarto);
             }
             [Test]
             public void Gana_Tijeras_A_Lagarto()
             {
-                Assert.AreEqual(resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GANA_JUGADOR_1);
+                Assert.AreEqual(_resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GanaJugador1);
             }
         }
 
         [TestFixture]
-        public class Test_Lagarto_Come_Papel
+        public class TestLagartoComePapel
         {
             Piedra_Papel_Tijera_Lagarto_Spock.Clases.IJuego SUT =
                 new Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego();
 
-            private string resultado;
+            private string _resultado;
             [SetUp]
             public void Setup()
             {
-                resultado = SUT.ObtenerResultado
+                _resultado = SUT.ObtenerResultado
                     (Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Papel,
                     Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Lagarto);
             }
             [Test]
             public void Gana_Lagarto_A_Papel()
             {
-                Assert.AreEqual(resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GANA_JUGADOR_2);
+                Assert.AreEqual(_resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GanaJugador2);
             }
         }
 
         [TestFixture]
-        public class Test_Papel_Refuta_Spock
+        public class TestPapelRefutaSpock
         {
             Piedra_Papel_Tijera_Lagarto_Spock.Clases.IJuego SUT =
                 new Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego();
 
-            private string resultado;
+            private string _resultado;
             [SetUp]
             public void Setup()
             {
-                resultado = SUT.ObtenerResultado
+                _resultado = SUT.ObtenerResultado
                     (Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Papel,
                     Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Spock);
             }
             [Test]
             public void Gana_Papel_A_Spock()
             {
-                Assert.AreEqual(resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GANA_JUGADOR_1);
+                Assert.AreEqual(_resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GanaJugador1);
             }
         }
 
         [TestFixture]
-        public class Test_Spock_Vaporiza_Piedra
+        public class TestSpockVaporizaPiedra
         {
-            Piedra_Papel_Tijera_Lagarto_Spock.Clases.IJuego SUT =
+          readonly Piedra_Papel_Tijera_Lagarto_Spock.Clases.IJuego SUT =
                 new Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego();
 
-            private string resultado;
+            private string _resultado;
             [SetUp]
             public void Setup()
             {
-                resultado = SUT.ObtenerResultado
+                _resultado = SUT.ObtenerResultado
                     (Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Piedra,
                     Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Spock);
             }
             [Test]
             public void Gana_Spock_A_Piedra()
             {
-                Assert.AreEqual(resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GANA_JUGADOR_2);
+                Assert.AreEqual(_resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GanaJugador2);
             }
         }
 
         [TestFixture]
-        public class Test_Piedra_Aplasta_Tijeras
+        public class TestPiedraAplastaTijeras
         {
             Piedra_Papel_Tijera_Lagarto_Spock.Clases.IJuego SUT =
                 new Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego();
 
-            private string resultado;
+            private string _resultado;
             [SetUp]
             public void Setup()
             {
-                resultado = SUT.ObtenerResultado
+                _resultado = SUT.ObtenerResultado
                     (Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Piedra,
                     Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.Elemento.Tijera);
             }
             [Test]
             public void Gana_Piedra_A_Tijera()
             {
-                Assert.AreEqual(resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GANA_JUGADOR_1);
+                Assert.AreEqual(_resultado, Piedra_Papel_Tijera_Lagarto_Spock.Clases.Juego.GanaJugador1);
             }
         }
     }
